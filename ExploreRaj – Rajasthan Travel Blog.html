@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ExploreRaj – Rajasthan Travel Blog</title>
+<style>
+:root{--bg:#ffffff;--soft:#fdf3e7;--ink:#222222;--muted:#666666;--line:#e6e0d6;--accent:#d9631e;--onaccent:#ffffff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17130f;--soft:#241d16;--ink:#f1ebe2;--muted:#b3a899;--line:#3a3128;--accent:#f08a4b;--onaccent:#17130f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17130f;--soft:#241d16;--ink:#f1ebe2;--muted:#b3a899;--line:#3a3128;--accent:#f08a4b;--onaccent:#17130f;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65;font-size:17px}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{line-height:1.25}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.logo{font-weight:800;font-size:1.4rem;color:var(--accent)}
+nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+nav a{padding:2px 0;border-bottom:2px solid transparent}
+nav a.on,nav a:hover{border-color:var(--accent)}
+.view{display:none;padding-bottom:56px}.view.on{display:block}
+.hero{background:var(--soft);padding:64px 0;text-align:center}
+.hero h1{font-size:clamp(2rem,6vw,3.2rem);margin-bottom:12px}
+.hero p{color:var(--muted);max-width:520px;margin:0 auto 24px}
+.btn{display:inline-block;background:var(--accent);color:var(--onaccent);padding:11px 24px;border-radius:6px;font-weight:600;border:0;cursor:pointer;font:inherit;font-weight:600}
+.banner{background:var(--soft);padding:44px 0;margin-bottom:32px}
+.banner h1{font-size:clamp(1.8rem,5vw,2.6rem)}
+.banner p{color:var(--muted)}
+h2{font-size:1.5rem;margin:36px 0 14px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.card .img{overflow:hidden;height:120px;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem}
+.card .b{padding:14px}
+.card h3{font-size:1.1rem}
+.card p{color:var(--muted);font-size:.95rem}
+.tag{color:var(--accent);font-size:.85rem;font-weight:600}
+.news{background:var(--soft);padding:40px 0;text-align:center;margin-top:44px}
+.news form{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
+input,textarea,select{padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.tools input{flex:1;min-width:200px}
+.sec{border-left:4px solid var(--accent);padding-left:16px;margin:26px 0}
+.sec h2{margin:0 0 6px;font-size:1.25rem}
+.sec p,.sec li{color:var(--muted)}
+.sec ul{padding-left:20px}
+.post{max-width:700px}
+.post .img{overflow:hidden;height:240px;background:var(--soft);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:18px 0}
+.post h2{margin:28px 0 10px}
+.post p,.post li{margin-bottom:12px}
+.form{display:grid;gap:12px;max-width:520px}
+.pager{display:flex;justify-content:space-between;margin-top:26px}
+.crumb{color:var(--muted);font-size:.9rem;padding:18px 0 0}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}
+footer div{display:flex;flex-wrap:wrap;gap:6px 16px}
+.legal p{margin-bottom:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#home">ExploreRaj</a>
+  <nav aria-label="Main">
+    <a href="#home" data-v="home">Home</a>
+    <a href="#destinations" data-v="destinations">Destinations</a>
+    <a href="#blog" data-v="blog">Blog</a>
+    <a href="#about" data-v="about">About</a>
+    <a href="#contact" data-v="contact">Contact</a>
+  </nav>
+</div></header>
+
+<main>
+<!-- HOME -->
+<section class="view" id="v-home">
+  <div class="hero"><div class="wrap">
+    <h1>Explore the Land of Kings</h1>
+    <p>Simple, honest guides to Rajasthan's cities, forts and festivals.</p>
+    <a class="btn" href="#destinations">Explore destinations</a>
+  </div></div>
+  <div class="wrap">
+    <h2>Popular Destinations</h2>
+    <div class="grid">
+      <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Jaipur</h3><p>The Pink City</p></div></a>
+      <a class="card" href="#destinations"><div class="img">Photo</div><div class="b"><h3>Udaipur</h3><p>City of Lakes</p></div></a>
+      <a class="card" href="#destinations"><div class="img">Photo</div><div class="b"><h3>Jodhpur</h3><p>The Blue City</p></div></a>
+      <a class="card" href="#destinations"><div class="img">Photo</div><div class="b"><h3>Jaisalmer</h3><p>The Golden City</p></div></a>
+      <a class="card" href="#destinations"><div class="img">Photo</div><div class="b"><h3>Pushkar</h3><p>Holy lake town</p></div></a>
+    </div>
+    <h2>Latest Blog Posts</h2>
+    <div class="grid">
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Itinerary</span><h3>2 Days in Jaipur: First-Timer Plan</h3><p>Forts, palaces and food stops.</p></div></a>
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Forts</span><h3>10 Best Forts in Rajasthan</h3><p>Timings and ticket info.</p></div></a>
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Budget Trips</span><h3>Udaipur Under ₹5,000</h3><p>3 days on a small budget.</p></div></a>
+    </div>
+  </div>
+  <div class="news"><div class="wrap">
+    <h2 style="margin:0">Get travel tips by email</h2>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p>Thanks for subscribing!</p>'">
+      <input type="email" required placeholder="Your email" aria-label="Email"><button class="btn" type="submit">Subscribe</button>
+    </form>
+  </div></div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="view" id="v-destinations">
+  <div class="banner"><div class="wrap"><h1>Destinations</h1><p>Pick a city to see how to plan your trip.</p></div></div>
+  <div class="wrap"><div class="grid">
+    <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Jaipur</h3><p>Amber Fort, Hawa Mahal</p></div></a>
+    <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Udaipur</h3><p>Lakes and palaces</p></div></a>
+    <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Jodhpur</h3><p>Mehrangarh Fort</p></div></a>
+    <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Jaisalmer</h3><p>Desert and golden fort</p></div></a>
+    <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Bikaner</h3><p>Junagarh Fort</p></div></a>
+    <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Pushkar</h3><p>Lake and camel fair</p></div></a>
+    <a class="card" href="#jaipur"><div class="img">Photo</div><div class="b"><h3>Mount Abu</h3><p>Hill station</p></div></a>
+  </div></div>
+</section>
+
+<!-- CITY TEMPLATE (use same layout for every city) -->
+<section class="view" id="v-jaipur">
+  <div class="banner"><div class="wrap"><h1>Jaipur</h1><p>The Pink City of Rajasthan</p></div></div>
+  <div class="wrap" style="max-width:760px">
+    <div class="sec"><h2>Overview</h2><p>2–3 lines about the city and why people visit.</p></div>
+    <div class="sec"><h2>Best Time to Visit</h2><p>October to March, when the weather is pleasant.</p></div>
+    <div class="sec"><h2>Top Places to Visit</h2><ul><li>Amber Fort</li><li>City Palace</li><li>Hawa Mahal</li><li>Jantar Mantar</li></ul></div>
+    <div class="sec"><h2>How to Reach</h2><p>By air, train and road.</p></div>
+    <div class="sec"><h2>Where to Stay</h2><p>Budget, mid-range and luxury options.</p></div>
+    <div class="sec"><h2>What to Eat</h2><p>Dal Baati Churma, Ghewar, Pyaaz Kachori.</p></div>
+    <h2>Related Blog Posts</h2>
+    <div class="grid">
+      <a class="card" href="#post"><div class="b"><h3>2 Days in Jaipur</h3></div></a>
+      <a class="card" href="#post"><div class="b"><h3>Top 10 Forts</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="view" id="v-blog">
+  <div class="banner"><div class="wrap"><h1>Blog</h1><p>Guides, tips and stories from Rajasthan.</p></div></div>
+  <div class="wrap">
+    <div class="tools">
+      <input type="search" placeholder="Search posts" aria-label="Search posts">
+      <select aria-label="Category"><option>All categories</option><option>Forts</option><option>Festivals</option><option>Budget Trips</option></select>
+    </div>
+    <div class="grid">
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Itinerary</span><h3>2 Days in Jaipur</h3><p>12 Nov 2026</p></div></a>
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Forts</span><h3>10 Best Forts in Rajasthan</h3><p>10 Nov 2026</p></div></a>
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Budget Trips</span><h3>Udaipur Under ₹5,000</h3><p>8 Nov 2026</p></div></a>
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Festivals</span><h3>Pushkar Camel Fair Guide</h3><p>5 Nov 2026</p></div></a>
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Forts</span><h3>Jaisalmer Fort Guide</h3><p>2 Nov 2026</p></div></a>
+      <a class="card" href="#post"><div class="img">Photo</div><div class="b"><span class="tag">Budget Trips</span><h3>Jodhpur in 2 Days</h3><p>30 Oct 2026</p></div></a>
+    </div>
+    <div class="pager"><a href="#blog">← Previous</a><a href="#blog">Next →</a></div>
+  </div>
+</section>
+
+<!-- SINGLE POST -->
+<section class="view" id="v-post">
+  <div class="wrap post">
+    <p class="crumb"><a href="#blog">Blog</a> / Itinerary</p>
+    <h1 style="margin-top:8px">2 Days in Jaipur: First-Timer Plan</h1>
+    <p style="color:var(--muted)">12 Nov 2026 · Itinerary</p>
+    <div class="img">Featured image</div>
+    <p>Short intro in 2–3 lines explaining what this post covers.</p>
+    <h2>Day 1: Forts and Palaces</h2><p>Main content with photos.</p>
+    <h2>Day 2: Markets and Food</h2><p>Main content with photos.</p>
+    <h2>FAQs</h2>
+    <p><strong>How many days are enough for Jaipur?</strong><br>Two days cover the main sights.</p>
+    <p><strong>What is the best time to visit?</strong><br>October to March.</p>
+    <p><strong>Share:</strong> Facebook · WhatsApp · X</p>
+    <h2>Related Posts</h2>
+    <div class="grid"><a class="card" href="#post"><div class="b"><h3>Top 10 Forts</h3></div></a><a class="card" href="#post"><div class="b"><h3>Udaipur Under ₹5,000</h3></div></a></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="view" id="v-about">
+  <div class="banner"><div class="wrap"><h1>About ExploreRaj</h1></div></div>
+  <div class="wrap" style="max-width:700px">
+    <div class="card" style="width:140px;margin-bottom:18px"><div class="img" style="height:140px">Your photo</div></div>
+    <h2 style="margin-top:0">Hi, I'm [Your Name]</h2>
+    <p>Write 3–4 lines about yourself and why you love Rajasthan.</p>
+    <h2>Why this blog</h2>
+    <p>To share simple, honest and useful travel guides for Rajasthan.</p>
+    <h2>Follow me</h2>
+    <p>Instagram · YouTube · Facebook</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="view" id="v-contact">
+  <div class="banner"><div class="wrap"><h1>Contact</h1><p>Questions or collaboration? Send a message.</p></div></div>
+  <div class="wrap">
+    <form class="form" onsubmit="event.preventDefault();this.innerHTML='<p>Message sent. Thank you!</p>'">
+      <input placeholder="Name" required aria-label="Name">
+      <input type="email" placeholder="Email" required aria-label="Email">
+      <textarea rows="5" placeholder="Message" required aria-label="Message"></textarea>
+      <button class="btn" type="submit">Send message</button>
+    </form>
+    <p style="margin-top:20px;color:var(--muted)">Email: hello@exploreraj.com</p>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section class="view" id="v-privacy"><div class="wrap legal"><h1 style="margin:32px 0 14px">Privacy Policy</h1><p>Explain what data you collect (email, analytics), how you use it and how visitors can contact you.</p></div></section>
+<section class="view" id="v-disclaimer"><div class="wrap legal"><h1 style="margin:32px 0 14px">Disclaimer</h1><p>State that the content is for information only and that prices and timings may change.</p></div></section>
+<section class="view" id="v-terms"><div class="wrap legal"><h1 style="margin:32px 0 14px">Terms &amp; Conditions</h1><p>Explain the rules for using the website and who owns the content.</p></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><strong>ExploreRaj</strong> Rajasthan travel blog</div>
+  <div><a href="#home">Home</a><a href="#destinations">Destinations</a><a href="#blog">Blog</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div><a href="#privacy">Privacy Policy</a><a href="#disclaimer">Disclaimer</a><a href="#terms">Terms &amp; Conditions</a></div>
+</div></footer>
+
+<script>
+(function(){
+  var views=document.querySelectorAll('.view'),links=document.querySelectorAll('nav a');
+  function show(){
+    var h=(location.hash||'#home').slice(1),el=document.getElementById('v-'+h);
+    if(!el){h='home';el=document.getElementById('v-home');}
+    views.forEach(function(v){v.classList.remove('on')});
+    el.classList.add('on');
+    var nav=h==='jaipur'?'destinations':h==='post'?'blog':h;
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-v')===nav)});
+    window.scrollTo(0,0);
+  }
+  var S={jaipur:['#fbd5a5','#f08a6b','#fff1c9','#d9826b','#c0566a',230,'fort'],udaipur:['#9fd0e8','#f6d9b0','#fff3d1','#7aa6b8','#e9dccb',60,'lake'],jodhpur:['#bfe3f5','#f7e6c8','#fff6d8','#6fa3d6','#3f7fc4',240,'blue'],jaisalmer:['#ffd9a0','#f5a35a','#fff0c0','#e0a35e','#c98a43',70,'dunes'],pushkar:['#6b5b95','#f2a07b','#ffe4a8','#8a6aa6','#4f3f7a',220,'lake'],bikaner:['#fcd5b8','#e8896a','#fff0cc','#c9755c','#9c3f33',80,'fort'],'mount abu':['#bfe6d2','#f4f0d0','#fff8d8','#7fbf9a','#4d9a6e',230,'hills']};
+  var keys=['jaipur','udaipur','jodhpur','jaisalmer','pushkar','bikaner'],n=0;
+  function fort(c){var t='';for(var x=100;x<200;x+=10)t+='<rect x="'+x+'" y="64" width="6" height="7"/>';return '<g fill="'+c+'"><rect x="100" y="70" width="100" height="52"/>'+t+'<rect x="90" y="52" width="16" height="70"/><rect x="194" y="52" width="16" height="70"/><circle cx="98" cy="50" r="9"/><circle cx="202" cy="50" r="9"/><circle cx="150" cy="66" r="12"/></g><path d="M140 122V100a10 10 0 0 1 20 0V122Z" fill="rgba(0,0,0,.35)"/>';}
+  function lake(c){return '<g fill="'+c+'"><rect x="85" y="84" width="130" height="26"/><circle cx="110" cy="82" r="11"/><circle cx="150" cy="78" r="15"/><circle cx="190" cy="82" r="11"/></g><rect y="110" width="300" height="40" fill="rgba(60,100,140,.55)"/><rect x="95" y="116" width="110" height="3" fill="rgba(255,255,255,.35)"/>';}
+  function blue(c){var h=[[20,85,36],[52,70,30],[84,92,40],[125,75,34],[160,90,38],[196,68,32],[230,88,40],[262,78,30]],t='';h.forEach(function(b,i){t+='<rect x="'+b[0]+'" y="'+b[1]+'" width="'+b[2]+'" height="'+(125-b[1])+'" fill="'+c+'" opacity="'+(i%2?1:.85)+'"/><rect x="'+(b[0]+8)+'" y="'+(b[1]+10)+'" width="7" height="9" fill="#fff" opacity=".6"/>';});return t;}
+  function dunes(c,b){return '<path d="M0 118 Q70 85 140 115 T300 100 V150 H0Z" fill="'+b+'"/><path d="M0 135 Q90 105 170 132 T300 122 V150 H0Z" fill="'+c+'"/>';}
+  function hills(c,b){return '<path d="M0 125 L70 70 L130 125Z M90 125 L170 55 L250 125Z M200 125 L260 80 L300 125Z" fill="'+c+'"/><path d="M0 140 Q80 110 160 135 T300 125 V150 H0Z" fill="'+b+'"/>';}
+  function scene(s,i){var t=s[6],b;
+    if(t==='fort')b=fort(s[4])+'<rect y="122" width="300" height="28" fill="'+s[3]+'"/>';
+    else if(t==='lake')b=lake(s[4]);
+    else if(t==='blue')b=blue(s[4])+'<rect y="124" width="300" height="26" fill="'+s[3]+'"/>';
+    else if(t==='dunes')b=dunes(s[4],s[3]);
+    else b=hills(s[3],s[4]);
+    return '<svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" role="img" aria-label="Illustration of Rajasthan"><defs><linearGradient id="sg'+i+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+s[0]+'"/><stop offset="1" stop-color="'+s[1]+'"/></linearGradient></defs><rect width="300" height="150" fill="url(#sg'+i+')"/><circle cx="'+s[5]+'" cy="42" r="18" fill="'+s[2]+'"/>'+(t==='dunes'?'':'<path d="M0 112 Q60 85 120 108 T240 102 T300 96 V150 H0Z" fill="'+s[3]+'" opacity=".6"/>')+b+'</svg>';}
+  document.querySelectorAll('.img').forEach(function(el,i){
+    if(/Your photo/.test(el.textContent))return;
+    var card=el.closest('.card'),h=card&&card.querySelector('h3'),name=h?h.textContent.toLowerCase():'',k=null;
+    Object.keys(S).forEach(function(key){if(name.indexOf(key)>-1)k=key;});
+    if(!k)k=keys[n++%keys.length];
+    el.innerHTML=scene(S[k],i);
+  });
+  window.addEventListener('hashchange',show);show();
+})();
+</script>
+</body>
+</html>
